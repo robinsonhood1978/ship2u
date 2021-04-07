@@ -1,0 +1,166 @@
+// ================================================================================================
+//  File Name: app-parcel.scss
+//  Description: Invoice Layout page layouts SCSS.
+//  ----------------------------------------------------------------------------------------------
+//  Item Name: Vuexy HTML Admin Template
+//  Version: 1.0
+//  Author: PIXINVENT
+//  Author URL: http://www.themeforest.net/user/pixinvent
+// ================================================================================================
+
+@import '../bootstrap-extended/include'; // Bootstrap includes
+@import '../components/include'; // Components includes
+
+$product-details-bg: #fcfcfc;
+$parcel-spacing: 1.45rem 0;
+$parcel-card-body-padding: 2.5rem;
+
+// Invoice Preview, Edit & Add
+.parcel-preview,
+.parcel-edit,
+.parcel-add {
+  .parcel-padding {
+    padding-left: $parcel-card-body-padding;
+    padding-right: $parcel-card-body-padding;
+  }
+  .table {
+    th:first-child,
+    td:first-child {
+      padding-left: 2.5rem;
+    }
+  }
+  .logo-wrapper {
+    display: flex;
+    align-items: center;
+    margin-bottom: 1.9rem;
+    .parcel-logo {
+      font-size: 2.142rem;
+      font-weight: bold;
+      letter-spacing: -0.54px;
+      margin-left: 1rem;
+      margin-bottom: 0;
+    }
+  }
+  .parcel-title {
+    font-size: 1.285rem;
+    margin-bottom: 1rem;
+    .parcel-number {
+      font-weight: 600;
+    }
+  }
+  .parcel-date-wrapper {
+    display: flex;
+    align-items: center;
+
+    &:not(:last-of-type) {
+      margin-bottom: 0.5rem;
+    }
+
+    .parcel-date-title {
+      // width: 9rem;
+      margin-bottom: 0;
+    }
+    .parcel-date {
+      margin-left: 0.5rem;
+      font-weight: 600;
+      margin-bottom: 0;
+    }
+  }
+  .parcel-spacing {
+    margin: $parcel-spacing;
+  }
+  .parcel-number-date {
+    .title {
+      width: 115px;
+    }
+  }
+  .parcel-total-wrapper {
+    width: 100%;
+    max-width: 12rem;
+    .parcel-total-item {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      .parcel-total-title {
+        margin-bottom: 0.35rem;
+      }
+      .parcel-total-amount {
+        margin-bottom: 0.35rem;
+        font-weight: 600;
+      }
+    }
+  }
+
+  @media (min-width: 768px) {
+    .parcel-title {
+      text-align: right;
+      margin-bottom: 3rem;
+    }
+  }
+}
+
+// Invoice Edit & Add
+.parcel-edit,
+.parcel-add {
+  .parcel-preview-card {
+    .parcel-title {
+      text-align: left;
+      margin-right: 3.5rem;
+      margin-bottom: 0;
+    }
+    .parcel-edit-input,
+    .parcel-edit-input-group {
+      max-width: 11.21rem;
+    }
+    .parcel-product-details {
+      background-color: $product-details-bg;
+      padding: 3.75rem 3.45rem 2.3rem 3.45rem;
+      .product-details-border {
+        border: 1px solid $border-color;
+        border-radius: $border-radius;
+      }
+    }
+    .parcel-to-title {
+      margin-bottom: 1.9rem;
+    }
+    .col-title {
+      position: absolute;
+      top: -3.2rem;
+    }
+    .item-options-menu {
+      min-width: 20rem;
+    }
+    .repeater-wrapper {
+      &:not(:last-child) {
+        margin-bottom: 3rem;
+      }
+    }
+    .parcel-calculations {
+      .total-amt-title {
+        width: 100px;
+      }
+    }
+  }
+  @media (max-width: 769px) {
+    .parcel-preview-card {
+      .parcel-title {
+        margin-right: 0;
+        width: 115px;
+      }
+      .parcel-edit-input {
+        max-width: 100%;
+      }
+    }
+  }
+  @media (max-width: 992px) {
+    .col-title {
+      top: -1.5rem !important;
+    }
+  }
+  @media print {
+    hr {
+      margin-top: 1rem !important;
+      margin-bottom: 1rem !important;
+    }
+  }
+}
